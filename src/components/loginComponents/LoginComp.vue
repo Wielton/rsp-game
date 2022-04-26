@@ -1,6 +1,6 @@
 <template>
     <v-main>
-        <h1>{{title}}</h1>
+        
         <v-form
             ref="form"
             v-model="valid"
@@ -93,9 +93,10 @@ import { mapState, mapWritableState } from 'pinia';
                     after(()=>{
                         router.push({path: '/game'}); 
                     })
-                } else {
-                    this.isAlert = true;
-                }
+                }// the Alert 
+                //else {
+                  //  this.isAlert = true;
+                  // }
             })
         },
         }

@@ -16,7 +16,7 @@
             <v-card
               
             >
-              <!--  -->
+              <ScoreboardComp/>
             </v-card>
           </v-col>
 
@@ -35,6 +35,7 @@
 <script>
 import PlayerComponent from '@/components/gameViewComponents/PlayerComp.vue'
 import OpponentComp from '@/components/gameViewComponents/OpponentComp.vue'
+import ScoreboardComp from '@/components/gameViewComponents/ScoreboardComp.vue'
 
 
   
@@ -44,7 +45,8 @@ import OpponentComp from '@/components/gameViewComponents/OpponentComp.vue'
 
     components: {
       PlayerComponent,
-        OpponentComp
+        OpponentComp,
+        ScoreboardComp
         
       
     },

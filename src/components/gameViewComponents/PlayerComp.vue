@@ -3,22 +3,32 @@
         height="300"
         rounded="lg"
         >
+        <v-card-title
+            class="headline"
+            >Player One</v-card-title>
         <v-card-actions>
             <v-btn
+                label="Rock"
                 elevation="2"
-                :click="rock"
+                @click="clickedRock"
                 >
+                Rock
                 </v-btn>
             <v-btn
+                label="Paper"
                 elevation="2"
-                :click="paper"
+                @click="clickedPaper"
                 >
+                Paper
                 </v-btn>
             <v-btn
+                label="Scissors"
                 elevation="2"
-                :click="scissors"
+                @click="clickedScissors"
                 >
+                Scissors
                 </v-btn>
+                
         </v-card-actions>
     </v-card>
 </template>
@@ -30,19 +40,26 @@ import {mapState} from 'pinia';
         name: 'PlayerComponent',
         data(){
             return {
-            store: undefined
+            store: undefined,
+            
+            
+            
             }
         },
         computed: {
             //Initial 
-            ...mapState(useGameStore,['button1', 'button2', 'button3']),
+            
+            ...mapState(useGameStore,['startGame']),
             //Getters
-            ...mapState(useGameStore,['quoteHttpCode', 'quoteText']),
+            
             //Actions
-            //...mapState(useGameStore,['loginRequest'])
+            ...mapState(useGameStore,['clickedRock','clickedPaper','clickedScissors'])
         },
         methods: {
             
+            
+            
+    
         }
     }
 </script>
